@@ -1,0 +1,46 @@
+  
+  <div class="content" role="main">
+    
+    <div class="card form-card" style="width: 30rem;">
+      <div class="card-body">
+        <div class="card-title">
+          <h5 class="card-title" style="text-align: center;"><b>We value your Feedback</b></h5>
+        </div>
+        <hr><br>
+        <form (ngSubmit) = "sendFeedback()">
+          <div class="form-row form-group">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name" name="fname" [(ngModel)]="registration.user.fname">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" name="lname" placeholder="Last name" [(ngModel)]="registration.user.lname">
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
+            [(ngModel)]="registration.user.email">
+            <small id="emailHelp" class="form-text text-muted">Email should be of tis format, <i>abc@gmail.com</i></small>
+          </div>
+          <div class="form-group">
+            <input type="feedback" class="form-control" id="exampleInputFeedback" name= "feedback" placeholder="Enter your Feedback" style="width:435px;height:150px;"
+            [(ngModel)]="registration.feedback">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Sign me for News Letter </label>
+          </div><br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <h3>{{responseForHtml}}</h3>
+        </div>
+    </div>
+    
+  
+  </div>
+  
+  
